@@ -15,8 +15,13 @@ body {
   );
 }
 
+#video_wrapper {
+  position: relative;
+}
 canvas {
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .page-title {

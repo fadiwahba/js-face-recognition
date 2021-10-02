@@ -1,4 +1,5 @@
 // Get the video node
+const videoWrapper = document.getElementById("video_wrapper");
 const video = document.getElementById("video");
 const loader = document.getElementById("loader");
 
@@ -28,7 +29,7 @@ function startVideo() {
 
 video.addEventListener("play", () => {
   const canvas = faceapi.createCanvasFromMedia(video);
-  document.body.append(canvas);
+  videoWrapper.appendChild(canvas);
   const displaySize = { width: video.width, height: video.height };
   faceapi.matchDimensions(canvas, displaySize);
   setInterval(async () => {
