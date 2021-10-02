@@ -1,0 +1,83 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(218, 195, 206);
+  background: linear-gradient(
+    0deg,
+    rgba(218, 195, 206, 1) 0%,
+    rgba(100, 126, 199, 1) 100%
+  );
+}
+
+canvas {
+  position: absolute;
+}
+
+.page-title {
+  color: #fff;
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+}
+.flex-row {
+  display: flex;
+  flex-flow: row;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-flow: column;
+}
+.w-100 {
+  width: 100%;
+}
+.dashbar-wrapper {
+  width: 300px;
+  height: 3px;
+  background-color: #f7f7f7;
+  display: inline-block;
+  border-radius: 5%;
+  border: 1px solid #f0f0f0;
+  padding: 0;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.dashbar {
+  display: inline-block;
+  height: 3px;
+  width: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  animation: loader-dashbar 0.8s ease-in-out infinite alternate;
+}
+.salmon {
+  background-color: salmon;
+}
+@keyframes loader-dashbar {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 250px;
+  }
+}
+
+/* video {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+} */

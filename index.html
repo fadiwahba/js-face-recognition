@@ -5,31 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Face Recognition</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      canvas {
-          position: absolute;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="./face-api.min.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
-    <video
-      id="video"
-      width="720"
-      height="560"
-      autoplay
-      muted
-    ></video>
+    <div class="container">
+      <div class="w-100 flex-row flex-center">
+        <h1 class="page-title">Face Recognition 🤓</h1>
+      </div>
+      <div id="loader" class="w-100 flex-row flex-center">
+        <div class="spinner">
+          <div class="dashbar-wrapper">
+            <span class="dashbar salmon"></span>
+          </div>
+        </div>
+      </div>
+      <div class="w-100">
+        <video id="video" width="720" height="560" autoplay muted>
+          Loading stream ...
+        </video>
+      </div>
+    </div>
   </body>
 </html>

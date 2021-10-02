@@ -1,5 +1,6 @@
 // Get the video node
 const video = document.getElementById("video");
+const loader = document.getElementById("loader");
 
 // Load all the models
 Promise.all([
@@ -7,7 +8,10 @@ Promise.all([
   faceapi.nets.faceLandmark68Net.loadFromUri("./models"),
   faceapi.nets.faceRecognitionNet.loadFromUri("./models"),
   faceapi.nets.faceExpressionNet.loadFromUri("./models"),
-]).then(startVideo);
+]).then(function() {
+  loader.style.display = "none";
+  startVideo();
+});
 
 function startVideo() {
   navigator.mediaDevices
